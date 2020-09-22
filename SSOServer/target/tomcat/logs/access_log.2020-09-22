@@ -1,0 +1,7 @@
+127.0.0.1 - - [22/Sep/2020:22:44:21 +0800] "GET /server/toLogin.do?service=webB HTTP/1.1" 200 1082 http-bio-7000-exec-2 114
+127.0.0.1 - - [22/Sep/2020:22:44:21 +0800] "GET /js/jquery.min.js HTTP/1.1" 200 95974 http-bio-7000-exec-3 5
+127.0.0.1 - - [22/Sep/2020:22:44:21 +0800] "GET /js/jquery.min.map HTTP/1.1" 404 985 http-bio-7000-exec-4 4
+127.0.0.1 - - [22/Sep/2020:22:44:26 +0800] "GET /server/login.do?userName=root&password=dfasfas&service=webB HTTP/1.1" 200 121 http-bio-7000-exec-5 220
+127.0.0.1 - - [22/Sep/2020:22:44:26 +0800] "GET /server/verifyToken.do?token=5e732f50-ec98-46bd-a20c-25f158b03177 HTTP/1.1" 200 45 http-bio-7000-exec-7 12
+127.0.0.1 - - [22/Sep/2020:22:44:35 +0800] "GET /server/toLogin.do?service=webA HTTP/1.1" 302 - http-bio-7000-exec-6 4
+127.0.0.1 - - [22/Sep/2020:22:44:35 +0800] "GET /server/verifyToken.do?token=5e732f50-ec98-46bd-a20c-25f158b03177 HTTP/1.1" 200 45 http-bio-7000-exec-10 6

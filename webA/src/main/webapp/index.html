@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    Welcome to webA SYSTEM!
+    Best Wishes !!!!!!!!!!!!!!
+
+    Your name is <strong class="userName"></strong>
+    <script>
+        $.ajax({
+            url:"/user/userName.do",
+            type:"get",
+            crossDomain:true,
+            xhrFields:{
+                withCredentials:true
+            },
+            success(result,status,xhr) {
+                if ("REDIRECT"==xhr.getResponseHeader("REDIRECT")){
+                    window.location.href=xhr.getResponseHeader("CONTENTPATH")
+                }else{
+                    $(".userName").text(result["object"].userName);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

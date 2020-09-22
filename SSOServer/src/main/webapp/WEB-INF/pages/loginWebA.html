@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/jquery.min.js"></script>
+</head>
+<body>
+<p>A</p>
+<h1> Welcome  to   WebA's   loginPage  </h1>
+<h2>Please input your information</h2>
+    <form>
+        userName: <input type="text" name="userName" id="userName">
+        <br>
+        password: <input type="password" name="password" id="password">
+        <br>
+    </form>
+    <button id="subBtn">LOGIN</button>
+<script>
+    $("#subBtn").click(function () {
+        $.ajax({
+            url:"/server/login.do",
+            type:"get",
+            crossDomain:true,
+            xhrFields:{
+              withCredentials:true
+            },
+            data:{
+                userName:$("#userName").val(),
+                password:$("#password").val(),
+                service:"webA"
+            },
+            success(result){
+                if (result["success"]){
+                    window.location.href=result["message"]
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>
