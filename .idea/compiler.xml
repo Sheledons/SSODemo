@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SSOServer" />
-        <module name="utils" />
+        <module name="pojo" />
         <module name="webB" />
         <module name="webA" />
-        <module name="pojo" />
+        <module name="utils" />
       </profile>
     </annotationProcessing>
   </component>
